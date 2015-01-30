@@ -1,0 +1,25 @@
+
+<ion-view title="{{SellsInvoice.party.name}}">
+  <ion-content class="padding"> 
+
+  <div class="list">
+
+      <a class="item" href="#/Customers/customer/{{SellsInvoice.party.id}}">
+              Customer  :  {{SellsInvoice.party.name}} 
+      </a>
+      <a class="item">
+            Invoice Number : {{SellsInvoice.invoiceNo}}
+      </a>
+      <a class="item">
+            Invoice Date : {{SellsInvoice.invoiceDate | date:'MMM-dd-yyyy'}}
+      </a>
+      <a class="item">
+           Due Date : {{SellsInvoice.dueDate | date:'MMM-dd-yyyy'}}
+      </a>
+      <a class="item">
+            Invoice total : Rs {{SellsInvoice.invoiceTotal}}
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>

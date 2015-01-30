@@ -1,0 +1,41 @@
+
+<ion-view title="New Payment">
+
+    <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-checkmark" ui-sref='PaymentDetails.details-list' ng-click=''></a> 
+    </ion-nav-buttons>
+
+  <ion-content class="padding">
+
+      <label class="item item-input item-select">
+          <div class="input-label">{{chooseCustomer}}</div>
+            <select ng-model = "chooseCustomer">
+              <option ng-repeat="customer in customers">{{customer.name}}</option>
+          </select>
+      </label>
+      <label class="item item-input item-select">
+          <div class="input-label">{{paymentMethod}}</div>
+            <select ng-model = "paymentMethod">
+              <option ng-repeat="Pmethod in Pmethods">{{Pmethod}}</option>
+          </select>
+      </label>
+
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Payment Date</span>
+          <input type="date" placeholder="Payment Date">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Description</span>
+          <input type="text" placeholder="Description">
+        </label>
+         <div class="item item-divider">
+            Total :
+          </div>
+ 
+      </div>
+      
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,30 @@
+
+<ion-view title="{{returnItem.name}}">
+  <ion-content class="padding"> 
+    <ion-item  class="item item-avatar">
+            <img src="../../pics/return/{{returnItem.name}}.jpg">
+            <h3>  {{returnItem.description}}</h3> 
+    </ion-item>
+
+    <ul class="list">
+        <li class="item">
+          Customer : {{returnItem.customer}}
+        </li>
+        <li class="item">
+          Supply Date : {{returnItem.Sdate}}
+        </li>
+        <li class="item">
+          Returned Date : {{returnItem.Rdate}}
+        </li>
+        <li class="item">
+          Unit Prize  : Rs {{returnItem.prize}}
+        </li>
+        <li class="item">
+          Units :  {{returnItem.units}}
+        </li>
+         <div class="item item-divider">
+         Total : Rs {{returnItem.total}}
+        </div>
+    </ul>
+  </ion-content>
+</ion-view>

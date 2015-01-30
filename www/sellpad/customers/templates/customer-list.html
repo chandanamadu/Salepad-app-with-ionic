@@ -1,0 +1,27 @@
+
+<ion-view title="Customers"> 
+    <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-plus" ui-sref='Customers.new-customer'></a> 
+    </ion-nav-buttons>    
+  
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search By Customer or Supplier" ng-model="searchKey">
+        </label>
+        <button class="button button-clear" ng-click="cancel()">Cancel</button>
+    </div>
+
+    <ion-content class="padding">
+    <br><br>
+
+     <div class="list">
+            <ion-item ng-repeat="customer in  customers" class="item item-avatar" href="#/Customers/customer/{{customer.id}}">
+                <img src="../../pics/images.jpg">
+                <h3>{{customer.name}}</h3> 
+            </item>
+         </div>
+       
+       
+    </ion-content>
+</ion-view>

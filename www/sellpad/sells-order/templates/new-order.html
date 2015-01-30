@@ -1,0 +1,54 @@
+
+<ion-view title="New Order">
+      <ion-nav-buttons side="right">
+        <a  class="button button-icon icon ion-person-add" ui-sref='Sells-Order.new-customer'></a>  
+        <a  class="button button-icon icon ion-checkmark" ui-sref='Sells-Order.Order-list'></a>
+    </ion-nav-buttons> 
+
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search By Item" ng-model="searchKey" >
+        
+        </label>
+        <button class="button button-clear" ng-click="cancel()">Cancel</button>
+    </div>
+  <ion-content class="padding">
+    <div class="list">
+    <br><br>
+        <label class="item item-input item-select">
+          <div class="input-label">{{chooseCustomer}}</div>
+          <select ng-model = "chooseCustomer">
+          <option ng-repeat="customer in customers">{{customer.name}}</option>
+      </select>
+      </label>
+       <div class="item item-divider">
+        Rs {{currentTotal}}
+      </div>
+    <div class="list list-inset" >
+    
+            <div  class="item" ng-repeat="item in items">
+                <!--<img src="../../pics/pen.jpg"> -->
+                <h3>{{item.name}}</h3> 
+            </div>
+    </div>
+
+  </ion-content>
+</ion-view>
+
+
+<!--
+
+<label class="item item-input item-floating-label">
+            <span class="input-label">Order Date</span>
+        <input type="date"  placeholder="Order Date">
+        </label>
+
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Due Date</span>
+        <input type="date"  placeholder="Order Date">
+        </label>
+    </div>
+
+-->
+

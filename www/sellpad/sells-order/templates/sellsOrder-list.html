@@ -1,0 +1,29 @@
+
+
+<ion-view title="Sels-Order">
+    <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-plus-round" ui-sref='Sells-Order.new-order'></a> 
+    </ion-nav-buttons>     
+  
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search By Customer or Supplier" ng-model="searchKey" >
+        
+        </label>
+        <button class="button button-clear" ng-click="cancel()">Cancel</button>
+    </div>
+
+    <ion-content class="padding">
+    <br><br>
+        <div class="list">
+            <ion-item ng-repeat="SalesOrder in SalesOrders" class="item item-avatar" href="#/Sells-Order/order/{{SalesOrder.id}}">
+                <img src="../../pics/images.jpg">
+                <h3>{{SalesOrder.estimatedTotal}}</h3> 
+                <p>{{SalesOrder.party.name}}</p>
+
+            </item>
+         </div>
+       
+    </ion-content>
+</ion-view>

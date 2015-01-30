@@ -1,0 +1,37 @@
+
+
+
+<ion-view title="New Invoice">
+
+    <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-checkmark" ui-sref='invoices.invoices' ng-click='addNewInvoice()'></a> 
+    </ion-nav-buttons>
+
+  <ion-content class="padding">
+
+    <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Customer First Name</span>
+          <input type="text" ng-model="newInvoice.firstName" placeholder="Customer First Name">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Customer Last Name</span>
+          <input type="text" ng-model="newInvoice.lastName" placeholder="Customer Last Name">
+        </label>
+
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Due Date</span>
+        <input type="date" ng-model = "newInvoice.dueDate" placeholder="Due Date">
+        </label>
+
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Invoice Total</span>
+            <input type="text" ng-model="newInvoice.invoiceTotal" placeholder="Invoice Total">
+        </label>
+    </div>
+
+  </ion-content>
+</ion-view>
+
+

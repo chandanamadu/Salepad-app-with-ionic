@@ -1,0 +1,28 @@
+
+<ion-view title="Return-List">
+  <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-plus-round" ui-sref="ReturnManagement.new-returnItem"></a> 
+    </ion-nav-buttons> 
+
+     <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search By Item" ng-model="searchKey" >
+        
+        </label>
+        <button class="button button-clear" ng-click="cancel()">Cancel</button>
+    </div>
+  <ion-content class="padding">
+		<br><br>
+        <div class="list">
+            <ion-item ng-repeat="returnItem in returnItems" class="item item-avatar" href="#/ReturnManagement/returnItem/{{returnItem.id}}">
+             	<img src="../../pics/return/{{returnItem.name}}.jpg">
+              	<h3>{{returnItem.name}}</h3> 
+              	<p>RS {{returnItem.total}}</p>
+
+            </ion-item>
+    </div>
+  </ion-content>
+</ion-view>
+
+

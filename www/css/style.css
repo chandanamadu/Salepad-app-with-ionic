@@ -1,0 +1,7 @@
+ .ionic .button.button-positive.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #4a87ee;
+    font-size: 20px; 
+}

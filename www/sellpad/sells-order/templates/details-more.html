@@ -1,0 +1,17 @@
+
+<ion-view title="Order-Details">
+  <ion-content class="padding">
+  	<div class="list">
+            <ion-item ng-repeat="selectedItem in selectedItems" class="item item-avatar" >
+                <img src="../../pics/orderdetails/{{selectedItem.name}}.jpg">
+                <h3> Rs {{selectedItem.subTotal}}</h3> 
+                <p>{{selectedItem.units}}  units</p>
+            </item>
+    </div>
+    <div class="item item-divider">
+    	Total : Rs {{total}}
+  	</div>
+  </ion-content>
+</ion-view>
+
+

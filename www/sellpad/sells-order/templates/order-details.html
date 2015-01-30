@@ -1,0 +1,26 @@
+
+
+<ion-view title="{{SalesOrders.party.name}}">
+    <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-search" ui-sref='Sells-Order.detail-more'></a> 
+    </ion-nav-buttons>
+  <ion-content class="padding"> 
+
+        <a class="item item-avatar" href="#/Customers/customer/{{SalesOrders.party.id}}">
+            <img src="../../pics/images.jpg">
+            <h2>{{SalesOrders.party.name}}</h2>
+        </a>
+     <ul class="list">
+        <li class="item">
+           orderNo  : {{SalesOrders.orderNo}}
+        </li>
+
+        <li class="item">
+            Order createdAt : {{SalesOrders.createdAt| date:'MMM-dd-yyyy'}}
+        </li>
+        <div class="item item-divider">
+          Total : {{SalesOrders.estimatedTotal}}
+        </div>
+    </ul>
+  </ion-content>
+</ion-view>

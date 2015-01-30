@@ -1,0 +1,42 @@
+
+
+<ion-view title="New Return Item">
+    <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-checkmark" ui-sref='ReturnManagement.return-list'></a> 
+    </ion-nav-buttons>
+
+  <ion-content class="padding">
+    <label class="item item-input item-select">
+          <div class="input-label">{{chooseItem}}</div>
+          <select ng-model = "chooseItem">
+          <option ng-repeat="item in items">{{item.name}}</option>
+      </select>
+    </label>
+    <label class="item item-input item-select">
+          <div class="input-label">{{chooseCustomer}}</div>
+          <select ng-model = "chooseCustomer">
+          <option ng-repeat="customer in customers">{{customer.name}}</option>
+      </select>
+    </label>
+    <div class="list">
+       <label class="item item-input">
+        <input type="text" placeholder="Return Date">
+      </label>
+
+      <label class="item item-input">
+        <input type="text" placeholder="No of Units">
+      </label>
+
+      <label class="item item-input">
+        <textarea placeholder="Description"></textarea>
+      </label>
+    </div>
+
+    <div class="item item-divider">
+     Total : 
+    </div>
+
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,27 @@
+
+
+<ion-view title="Opportunities">
+    <ion-nav-buttons side="right"> 
+        <a  class="button button-icon icon ion-plus-round" ui-sref='Opportunities.newOpportunity'></a> 
+    </ion-nav-buttons> 
+      <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search By Customer" >       
+        </label>
+        <button class="button button-clear" ng-click="cancel()">Cancel</button>
+    </div>
+  <ion-content class="padding">
+	<br><br>
+        <div class="list">
+            <ion-item ng-repeat="opportunity in Opportunities" class="item item-avatar" href="#/Opportunities/opportunity/{{opportunity.id}}">
+             	<img src="../../pics/images.jpg">
+              	<h3>Rs {{opportunity.total}}</h3> 
+              	<p>{{opportunity.des}}</p>
+
+            </item>
+    </div>
+  </ion-content>
+</ion-view>
+
+

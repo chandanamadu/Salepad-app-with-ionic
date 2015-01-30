@@ -1,0 +1,31 @@
+
+<ion-view title="{{Opportunity.cus}}">
+  <ion-content class="padding"> 
+      <ion-item  class="item item-thumbnail-left" >
+              <img src="../../pics/images.jpg">
+                <h3>{{Opportunity.des}}</h3>
+      </ion-item>
+      <ul class="list">
+        <li class="item">
+            Order date : {{Opportunity.Odate}}
+        </li>
+        <li class="item">
+            Expected delivery : {{Opportunity.Edate}}
+        </li>
+        <li class="item">
+            Expected Total : Rs {{Opportunity.total}}
+        </li>
+
+        <li class="item item-toggle">
+              Won
+          <label class="toggle toggle-energized">
+              <input type="checkbox">
+              <div class="track">
+               <div class="handle"></div>
+              </div>
+          </label>
+        </li>
+
+      </ul>
+   </ion-content>
+</ion-view>

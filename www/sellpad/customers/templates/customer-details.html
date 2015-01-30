@@ -1,0 +1,31 @@
+
+<ion-view title="{{customer.name}}">
+  <ion-content class="padding"> 
+            <ion-item class="item item-thumbnail-left" >
+                <img src="../../pics/images.jpg">
+                    <h3>Average Sales</h3>
+                    <p>Rs {{testCustomer.averageSales}}</p>
+            </ion-item>  
+
+            <ul class="list">
+    			 <a class="item item-icon-left">
+    				<i class="icon ion-ios7-telephone-outline"></i>
+    					{{testCustomer.Mobile}}
+  				 </a>
+  				 <a class="item item-icon-left" >
+    				<i class="icon ion-email"></i>
+    					{{testCustomer.email}}
+  				 </a>
+  				 <li class="item">
+      					{{testCustomer.address}}
+    			</li>
+    			<li class="item">
+    					{{testCustomer.Company}}
+    			</li>
+			   		<div class="item range range-assertive">
+    					Credibility
+    				<input type="range" name="volume" min="0" max="90" value="{{testCustomer.credibility}}">
+      				</div>
+			</ul>         
+  </ion-content>
+</ion-view>
